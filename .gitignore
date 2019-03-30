@@ -6,3 +6,5 @@ target/
 *.log*
 build/
 out/
+test.html
+dependency-reduced-pom.xml

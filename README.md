@@ -18,18 +18,18 @@ java -jar ./target/app4-*.jar
 
 ## gradle
 
-### fatJar
-
-```bash
-gradle fatJar
-java -jar ./build/libs/*-all.jar
-```
-
 ### application plugin
 
 ```bash
 gradle installDist
 bash ./build/install/java-mp-smallrye-example/bin/java-mp-smallrye-example
+```
+
+### fatJar
+
+```bash
+gradle fatJar
+java -jar ./build/libs/*-all.jar
 ```
 
 links:

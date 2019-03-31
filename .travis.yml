@@ -1,0 +1,23 @@
+notifications:
+  email: false
+env:
+  global:
+    - TERM=dumb
+language: java
+jdk: openjdk8
+addons:
+  apt:
+    packages:
+      - bash
+install: true
+script:
+  - ./mvnw >/dev/null
+  - java -jar ./target/java-mp-smallrye-example-*.jar
+  #
+  - ./gradlew >/dev/null
+  - java -jar ./build/libs/*-all.jar
+  - bash ./build/install/java-mp-smallrye-example/bin/java-mp-smallrye-example
+cache:
+  directories:
+    - $HOME/.m2
+    - $HOME/.gradle

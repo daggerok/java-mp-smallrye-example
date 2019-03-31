@@ -3,23 +3,32 @@ Example of java micro-profile example using smallrye
 
 ## maven
 
+### exec plugin
+
 ```bash
 mvn clean package exec:java -Dexec.mainClass=com.github.daggerok.App
 ```
 
-## gradle
-
-### fatJar gradle task
+### fatJar
 
 ```bash
-./gradlew fatJar
+mvn clean package
+java -jar ./target/app4-*.jar
+```
+
+## gradle
+
+### fatJar
+
+```bash
+gradle fatJar
 java -jar ./build/libs/*-all.jar
 ```
 
-### application gradle plugin
+### application plugin
 
 ```bash
-./gradlew installDist
+gradle installDist
 bash ./build/install/java-mp-smallrye-example/bin/java-mp-smallrye-example
 ```
 
